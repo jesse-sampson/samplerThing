@@ -20,6 +20,13 @@ try:
 except: 
 	print("ERROR: Usage: sampleScript.py CSVINPUT [SAMPLE_OUTPUT_PATH] [CHART_OUTPUT_PATH]")
 
+# also checking for help flags and putting a usage helper in there if a help flag is applied.
+helps=set(["-help", "--help" ,"-h", "--h"])
+for i in sys.argv:
+	if i in helps:
+		print("Usage: sampleScript.py CSVINPUT [SAMPLE_OUTPUT_PATH] [CHART_OUTPUT_PATH]")
+		exit(1)
+
 # getting other possible inputs, output paths
 argss=len(sys.argv)
 if argss>2:
@@ -30,13 +37,6 @@ if argss>3:
 	chartoutput = os.path.abspath(sys.argv[3])
 else:
 	chartoutput="sample_output.png"
-
-# also checking for help flags and putting a usage helper in there if a help flag is applied.
-helps=set(["-help", "--help" ,"-h", "--h"])
-for i in sys.argv:
-	if i in helps:
-		print("Usage: sampleScript.py CSVINPUT [SAMPLE_OUTPUT_PATH] [CHART_OUTPUT_PATH]")
-		exit(1)
 
 # finally to sanitize inputs failing if too many args are passed and they are not help
 if argss>4:

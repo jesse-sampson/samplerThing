@@ -1,8 +1,3 @@
-.png
-.csv
-.pyc
-
--h
-__pycache__/functions.cpython-36.pyc
-__pycache__/helperFunctions.cpython-36.pyc
-sample_output.png
+*.png
+*.csv
+*.pyc
