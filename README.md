@@ -45,7 +45,7 @@ def import_or_install(package):
    	except ImportError:
    	pip.main(['install', package]) 
 
-for i in ["math","csv","sys","os","random","tempfile","defaultdict","statistics","scipy","numpy","matplotlib"]:
+for i in ["math","csv","sys","os","random","tempfile","collections","statistics","scipy","numpy","matplotlib"]:
 	import_or_install(i)
 ```
 
