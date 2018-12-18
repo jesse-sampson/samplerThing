@@ -2,7 +2,7 @@
 
 This has been for an exercise submission. The project goal is to take a representative sample of a larger csv file of a given format and produce a sample and chart. 
 
-My approach is to use stratified sampling ![https://en.wikipedia.org/wiki/Stratified_sampling] and layer in a two-sample chi-squared test ![https://ned.ipac.caltech.edu/level5/Wall2/Wal4_3.html] to provide an extra layer of evidence that the sample represents underlying values. 
+My approach is to use stratified sampling https://en.wikipedia.org/wiki/Stratified_sampling and layer in a two-sample chi-squared test https://ned.ipac.caltech.edu/level5/Wall2/Wal4_3.html to provide an extra layer of evidence that the sample represents underlying values. 
 
 ## Usage: 
 
