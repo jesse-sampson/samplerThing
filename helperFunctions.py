@@ -41,7 +41,7 @@ def splitCsvAndGetCounts(csvIn,filepath,sTypes):
         dialect = csv.Sniffer().sniff(csvfile.read(1024))
         reader = csv.reader(csvfile    ,dialect)
         # open output file for writing and add header
-        with open(filepath,'w') as outfile:
+        with open(filepath,'w',newline='') as outfile:
             #define the writer for our output sample
             outwriter=csv.writer(outfile,delimiter=',',quoting=csv.QUOTE_NONE)
             #give our output a header so it's the same format
@@ -69,7 +69,7 @@ def splitCsvAndGetCounts(csvIn,filepath,sTypes):
             # loop over sensor types list and count sensors per partition
             sensorTypes=sTypes
             for i in sensorTypes:
-                with tempfile.TemporaryFile('r+') as tf:
+                with tempfile.TemporaryFile('r+',newline='') as tf:
                     tmpwriter=csv.writer(tf,delimiter=',',quoting=csv.QUOTE_NONE)
                     csvfile.seek(0)
                     seen=set()
