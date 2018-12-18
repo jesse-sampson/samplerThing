@@ -132,7 +132,7 @@ def checkOutputSample(csvIn,sTypes,stratSizes):
 
         # if the p-value is below our alpha level there might be something wrong, should alert and get another look
         if p<alpha:
-            print('ERROR there was a problem with this sample and it doesn't fit the expected distribution. please run tool again.')
+            print('ERROR there was a problem with this sample and it no longer fits the expected distribution. please run tool again.')
             sys.exit(1)
         return ctable,p
 
