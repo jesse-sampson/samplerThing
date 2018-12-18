@@ -19,4 +19,34 @@ ____
 > ...
 ____
 
+## Requirements:
+
+* Python 3+
+
+* math
+* csv
+* sys
+* os
+* random
+* tempfile
+* defaultdict
+* statistics
+* scipy
+* numpy
+* matplotlib
+
+____
+> import pip
+>
+> def import_or_install(package):
+>    try:
+>        __import__(package)
+>    except ImportError:
+>       pip.main(['install', package]) 
+>
+> for i in ["math","csv","sys","os","random","tempfile","defaultdict","statistics","scipy","numpy","matplotlib"]:
+> 	import_or_install(i)
+____
+
+
 Any feedback please send to jesse {DOT} sampson {AT} gmail {DOT} com
