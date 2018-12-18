@@ -21,7 +21,7 @@ integer,integer
 
 ## Requirements:
 
-* Python 3+
+* Python 3.5+
 
 * math
 * csv
@@ -29,7 +29,7 @@ integer,integer
 * os
 * random
 * tempfile
-* defaultdict
+* collections
 * statistics
 * scipy
 * numpy
@@ -40,10 +40,10 @@ integer,integer
 import pip
 
 def import_or_install(package):
-   try:
-       __import__(package)
-   except ImportError:
-      pip.main(['install', package]) 
+	try:
+     __import__(package)
+   	except ImportError:
+   	pip.main(['install', package]) 
 
 for i in ["math","csv","sys","os","random","tempfile","defaultdict","statistics","scipy","numpy","matplotlib"]:
 	import_or_install(i)
