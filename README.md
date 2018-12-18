@@ -13,10 +13,10 @@ sampleScript.py CSVINPUT [SAMPLE_OUTPUT_PATH] [CHART_OUTPUT_PATH]
 * limited to 200 sensor types
 * must provide .csv in this format 
 ```
-> sensorId,sensorType
-> integer,integer
-> integer,integer 
-> ...
+sensorId,sensorType
+integer,integer
+integer,integer 
+...
 ```
 
 ## Requirements:
@@ -37,16 +37,16 @@ sampleScript.py CSVINPUT [SAMPLE_OUTPUT_PATH] [CHART_OUTPUT_PATH]
 
 ```
 
-> import pip
->
-> def import_or_install(package):
->    try:
->        __import__(package)
->    except ImportError:
->       pip.main(['install', package]) 
->
-> for i in ["math","csv","sys","os","random","tempfile","defaultdict","statistics","scipy","numpy","matplotlib"]:
-> 	import_or_install(i)
+import pip
+
+def import_or_install(package):
+   try:
+       __import__(package)
+   except ImportError:
+      pip.main(['install', package]) 
+
+for i in ["math","csv","sys","os","random","tempfile","defaultdict","statistics","scipy","numpy","matplotlib"]:
+	import_or_install(i)
 ```
 
 
