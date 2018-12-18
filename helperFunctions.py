@@ -1,3 +1,5 @@
+# A collection of functions for the sampling exercise
+
 # load relevant libraries
 # note that for a regular analysis I would probably use pandas but since this is
 # an exercise and an application I am not using pandas.
@@ -160,6 +162,7 @@ def makeSampleChart(ctable,p,chartoutput):
     bar_width = 0.35
     opacity = 0.8
 
+    # add bars making the height the proportion and the width the hardcoded value
     rects1 = plt.bar(index, totals_pop, bar_width,
                      alpha=opacity,
                      color='b',
@@ -170,6 +173,7 @@ def makeSampleChart(ctable,p,chartoutput):
                      color='g',
                      label='Sample Sensors')
 
+    # add labels
     autolabel(rects1,ctable[0])
     autolabel(rects2,ctable[1])
 
